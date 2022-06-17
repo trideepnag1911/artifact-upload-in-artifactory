@@ -1,0 +1,24 @@
+name: "Artifact upload in Artifactory"
+description: "This will upload artifact into the desired Artifactory location"
+author: "Trideep Nag <trideepnag@gmail.com>"
+inputs:
+  USER_NAME:  
+    description: 'Username to login with'
+    required: true
+  PASSWORD:
+    description: 'Password of the Username used for login'
+    required: true
+  FILE:
+    description: 'Artifact location'
+    required: true
+  REGISTRY:
+    description: 'Desired Artifactory URL'
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.USER_NAME }}
+    - ${{ inputs.PASSWORD }}
+    - ${{ inputs.FILE }}
+    - ${{ inputs.REGISTRY }}
