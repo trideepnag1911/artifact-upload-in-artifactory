@@ -10,15 +10,10 @@ inputs:
     required: false
   FILE:
     description: 'Artifact location'
-    required: true
+    required: false
   REGISTRY:
     description: 'Desired Artifactory URL'
-    required: true
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.USER_NAME }}
-    - ${{ inputs.PASSWORD }}
-    - ${{ inputs.FILE }}
-    - ${{ inputs.REGISTRY }}
