@@ -4,10 +4,10 @@ author: "Trideep Nag <trideepnag@gmail.com>"
 inputs:
   USER_NAME:  
     description: 'Username to login with'
-    required: true
+    required: false
   PASSWORD:
     description: 'Password of the Username used for login'
-    required: true
+    required: false
   FILE:
     description: 'Artifact location'
     required: true
